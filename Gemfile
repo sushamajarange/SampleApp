@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  #gem 'sqlite3', '1.3.11'
+  gem 'sqlite3', :group => [:development, :test]
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
@@ -50,8 +50,8 @@ group :development do
 
 group :production do
  # gem 'pg', '0.18.4'
-  gem 'sqlite3', :group => [:development, :test]
-  gem 'thin'
+  #gem 'sqlite3', :group => [:development, :test]
+  #gem 'thin'
   gem 'pg'
 
 end
